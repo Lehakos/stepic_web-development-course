@@ -1,4 +1,4 @@
-from urlparse import parse_qsl
+from urllib.parse import parse_qsl
 
 def app(evniron, start_response):
   status = '200 OK'
