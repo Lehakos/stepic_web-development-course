@@ -1,2 +1,4 @@
-init.local.sh
-etc/nginx.local.conf
+*.local.*
+**/__pycache__
+*.pyc
+.vscode
