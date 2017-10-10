@@ -12,4 +12,4 @@ def app(evniron, start_response):
     body += '{}={}\n'.format(item[0], item[1])
 
   start_response(status, headers)
-  return body
+  return [ bytes(body, 'utf-8') ]
