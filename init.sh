@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-source env/bin/activate
+virtualenv --no-site-packages --distribute .env
+source .env/bin/activate
+pip install -r dependencies.txt
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
