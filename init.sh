@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-python3 -m venv myvenv --without-pip
+pip3 install virtualenv --user
+virtualenv -p python3 env
 source env/bin/activate
-pip install -r dependencies.txt
+pip install -r requirements.txt
 sudo rm -rf /etc/nginx/sites-enabled/default
 sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
